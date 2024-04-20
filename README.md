@@ -2,7 +2,7 @@
 Refine segmentation masks with Segment Anything Model(SAM)
 
 # Example:
-![alt text](https://raw.githubusercontent.com/99eren99/SegmentBooster/main/example.JPG)
+<img src="https://raw.githubusercontent.com/99eren99/SegmentBooster/main/example.JPG" width="512" height="512">
 
 # For requirements:
 ```java
