@@ -2,14 +2,16 @@
 Refine segmentation masks with Segment Anything Model(SAM)
 
 <br />
+#Example:
 ![img](https://raw.githubusercontent.com/99eren99/SegmentBooster/main/example.JPG)
-<br /> <br />For requirements:<br />
+
+<br /> <br />#For requirements:<br />
 ```python
 install SAM -> https://github.com/facebookresearch/segment-anything
 numpy, cv2
 ```
 <br />
-demo.py:<br />
+#demo.py:<br />
 ```python 
 from segmentBooster import refineMask
 samModelType="..."
