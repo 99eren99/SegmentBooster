@@ -2,16 +2,17 @@
 Refine segmentation masks with Segment Anything Model(SAM)
 
 <br />
-#Example:
-![img](https://raw.githubusercontent.com/99eren99/SegmentBooster/main/example.JPG)
+# Example:
+![alt text](https://raw.githubusercontent.com/99eren99/SegmentBooster/main/example.JPG)
 
-<br /> <br />#For requirements:<br />
-```python
+<br /> <br />
+# For requirements:<br />
+```java
 install SAM -> https://github.com/facebookresearch/segment-anything
 numpy, cv2
 ```
 <br />
-#demo.py:<br />
+# demo.py:<br />
 ```python 
 from segmentBooster import refineMask
 samModelType="..."
@@ -21,4 +22,3 @@ segmentationMask="..."#2D numpy array with shape(image.shape), storing pixel lev
 
 refinedMask=refineMask(imagePath,segmentationMask,SAMtype,SAMcheckpoint)#outputs 2D numpy array with shape(image.shape), storing pixel level class IDs.
 ```
-<br />
