@@ -11,13 +11,13 @@ numpy, cv2
 ```
 # demo.py:
 ```python 
-from segmentBooster import refineMask
+from segment_anything import SamAutomaticMaskGenerator, sam_model_registry
 SAMtype="..."
 SAMcheckpoint="..."
 sam = sam_model_registry[SAMtype](checkpoint=SAMcheckpoint)
 mask_generator = SamAutomaticMaskGenerator(sam)
 
-from segment_anything import SamAutomaticMaskGenerator, sam_model_registry
+from segmentBooster import refineMask
 imagePath"..."
 segmentationMask="..."#2D numpy array with shape(image.shape), storing pixel level class IDs.
 
