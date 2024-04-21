@@ -1,14 +1,11 @@
 import numpy as np
 import cv2
-from segment_anything import SamAutomaticMaskGenerator, sam_model_registry
 
 
-def refineMask(imagePath,segmentationMask,SAMtype,SAMcheckpoint):
+def refineMask(imagePath,segmentationMask,mask_generator):
     image = cv2.imread(imagePath)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-    sam = sam_model_registry[SAMtype](checkpoint=SAMcheckpoint)
-    mask_generator = SamAutomaticMaskGenerator(sam)
     masks = mask_generator.generate(image)
 
     masks=sorted(masks, key=(lambda x: x['area']), reverse=True)
