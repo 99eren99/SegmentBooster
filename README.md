@@ -14,8 +14,13 @@ numpy, cv2
 from segmentBooster import refineMask
 samModelType="..."
 samModelCheckpoint="..."
+sam = sam_model_registry[SAMtype](checkpoint=SAMcheckpoint)
+mask_generator = SamAutomaticMaskGenerator(sam)
+
+from segment_anything import SamAutomaticMaskGenerator, sam_model_registry
 imagePath"..."
 segmentationMask="..."#2D numpy array with shape(image.shape), storing pixel level class IDs.
 
-refinedMask=refineMask(imagePath,segmentationMask,SAMtype,SAMcheckpoint)#outputs 2D numpy array with shape(image.shape), storing pixel level class IDs.
+#outputs 2D numpy array with shape(image.shape), storing pixel level class IDs.
+refinedMask=refineMask(imagePath,segmentationMask,mask_generator)
 ```
