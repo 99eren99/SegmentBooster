@@ -12,8 +12,8 @@ numpy, cv2
 # demo.py:
 ```python 
 from segmentBooster import refineMask
-samModelType="..."
-samModelCheckpoint="..."
+SAMtype="..."
+SAMcheckpoint="..."
 sam = sam_model_registry[SAMtype](checkpoint=SAMcheckpoint)
 mask_generator = SamAutomaticMaskGenerator(sam)
 
